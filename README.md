@@ -12,7 +12,6 @@ Player starting weapons are also included.
 3. Move **SuperhotRandomizer.dll** (From Downloads) to the new **Mods** folder in your Superhot Directory.
 4. Start your game and enjoy.
 
-
 # Building
 Project can be built with: .NET Framework 4.7.2
 Please note, a build script has been added to automatically move the build mod to the games directory, for this to work, you have to provide a txt file named "config.txt" which only contains the full path to the games mods folder.
