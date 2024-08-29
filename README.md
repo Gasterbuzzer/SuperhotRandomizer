@@ -6,7 +6,7 @@ Player starting weapons are also included.
 
 # How to Install:
 1. Download MelonLoader from the official website: [MelonLoader Download](https://melonwiki.xyz/#/?id=requirements)
-﻿([MelonLoader Releases](https://github.com/LavaGang/MelonLoader/releases/))
+1.1 ﻿([MelonLoader Releases](https://github.com/LavaGang/MelonLoader/releases/))
 ﻿﻿
 2.﻿﻿ Use the installer on **SH.exe** in your Superhot Directory (Right mouse click the game in Steam with → Manage → Browse Local Files)
 3. Move **SuperhotRandomizer.dll** (From Downloads) to the new **Mods** folder in your Superhot Directory.
