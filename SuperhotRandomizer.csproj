@@ -65,8 +65,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AssetsUtil.cs" />
-    <Compile Include="MainClass.cs" />
+    <Compile Include="src\AssetsUtil.cs" />
+    <Compile Include="src\MainClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
