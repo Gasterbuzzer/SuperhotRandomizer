@@ -27,6 +27,10 @@ namespace SuperhotRandomizer
         public const string Version = "1.0.0";
         public const string DownloadLink = null;
     }
+
+    /// <summary>
+    /// Main Class / Currently unused
+    /// </summary>
     public class MainClass : MelonMod
     {
     }
@@ -36,6 +40,11 @@ namespace SuperhotRandomizer
     {
         public static System.Random random = new System.Random();
 
+        /// <summary>
+        /// Patches Start Method of Enemies. Changes weapon, Speed and their Size.
+        /// </summary>
+        /// <param name="__originalMethod"> Method which was called (Used to get class type.) </param>
+        /// <param name="__instance"> Caller of function. </param>
         private static void Postfix(MethodBase __originalMethod, object __instance)
         {
             Type classType = __originalMethod.DeclaringType;
@@ -106,7 +115,6 @@ namespace SuperhotRandomizer
             }
 
             // Now we randomize some of their stats
-
             // Walking / Running / Look Speed
             float walkingSpeed = random.Next(0, 7);
             float runningSpeed = random.Next((int)walkingSpeed, 10);
@@ -156,6 +164,11 @@ namespace SuperhotRandomizer
     {
         public static System.Random random = new System.Random();
 
+        /// <summary>
+        /// Patches Start Method of Hand Manager of Player. Used to randomize starter weapon.
+        /// </summary>
+        /// <param name="__originalMethod"> Method which was called (Used to get class type.) </param>
+        /// <param name="__instance"> Caller of function. </param>
         private static void Postfix(MethodBase __originalMethod, object __instance)
         {
             Type classType = __originalMethod.DeclaringType;
@@ -205,6 +218,9 @@ namespace SuperhotRandomizer
     {
         public static System.Random random = new System.Random();
 
+        /// <summary>
+        /// Patches Enemy Spawn Method. Used to skip spawn with chance.
+        /// </summary>
         private static bool Prefix()
         {
             int randomNumber = random.Next(0, 4);
@@ -216,9 +232,13 @@ namespace SuperhotRandomizer
                 return false;
             }
 
+            // Do not skip spawn.
             return true;
         }
 
+        /// <summary>
+        /// Patches Enemy Spawn Method. Used to randomly add even more enemies.
+        /// </summary>
         private static void Postfix(MethodBase __originalMethod, object __instance)
         {
             int randomNumber = random.Next(0, 5);
@@ -226,11 +246,13 @@ namespace SuperhotRandomizer
             // Dupliacte Spawn
             if (randomNumber == 1)
             {
+                // One Extra Enemy
                 MelonLoader.MelonLogger.Msg("Spawning extra enemy.");
                 __originalMethod.Invoke(__instance, new object[] { });
             }
             else if (randomNumber == 2)
             {
+                // Two Extra Enemies
                 MelonLoader.MelonLogger.Msg("Spawning extra 2 enemies.");
                 __originalMethod.Invoke(__instance, new object[] { });
                 __originalMethod.Invoke(__instance, new object[] { });
@@ -243,6 +265,11 @@ namespace SuperhotRandomizer
     {
         public static System.Random random = new System.Random();
 
+        /// <summary>
+        /// Patches Start Method of Enemy Body. Used to randomly assign a new head prefab to enemy.
+        /// </summary>
+        /// <param name="__originalMethod"> Method which was called (Used to get class type.) </param>
+        /// <param name="__instance"> Caller of function. </param>
         private static void Postfix(MethodBase __originalMethod, object __instance)
         {
             int randomNumber = random.Next(0, 5);
@@ -253,6 +280,7 @@ namespace SuperhotRandomizer
 
             if (randomNumber == 0)
             {
+                // Apply pumpkin head to enemy
                 MethodInfo replaceHeadMethod = classType.GetMethod("ReplaceHead", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
                 replaceHeadMethod.Invoke(__instance, new object[] { pumpkinHeadPrefab });
             }
