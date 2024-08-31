@@ -9,7 +9,6 @@ using HarmonyLib;
 using System.Reflection;
 using UnityEngine;
 
-using SuperhotRandomizerAssets;
 using UnityEngine.Rendering;
 using System.Collections;
 using TMPro;
