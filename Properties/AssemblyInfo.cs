@@ -36,7 +36,7 @@ using SuperhotRandomizer; // The namespace of your mod class
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
 
-[assembly: MelonInfo(typeof(MainClass), "Superhot Randomizer", "1.0.0", "Gasterbuzzer", "https://github.com/Gasterbuzzer/SuperhotRandomizer/releases/")]
+[assembly: MelonInfo(typeof(MainClass), "Superhot Randomizer", "1.1.0", "Gasterbuzzer", "https://github.com/Gasterbuzzer/SuperhotRandomizer/releases/")]
 [assembly: MelonGame("SUPERHOT_Team", "SUPERHOT")]
 [assembly: MelonAuthorColor(ConsoleColor.Magenta)]
 [assembly: MelonPriority(100)]

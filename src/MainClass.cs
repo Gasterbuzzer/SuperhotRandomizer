@@ -23,7 +23,7 @@ namespace SuperhotRandomizer
         public const string Description = "Mod for randomizing weapons on player and enemies.";
         public const string Author = "Gasterbuzzer";
         public const string Company = null;
-        public const string Version = "1.0.0";
+        public const string Version = "1.1.0";
         public const string DownloadLink = "https://github.com/Gasterbuzzer/SuperhotRandomizer/releases/";
     }
 
@@ -149,8 +149,21 @@ namespace SuperhotRandomizer
                 MelonLoader.MelonLogger.Msg("Resizing Enemy");
 
                 double randomSize = random.NextDouble();
+                
+                // Force minsize
+                if (randomSize <= 0.1)
+                {
+                    randomSize += 0.1;
+                }
+
                 int factor = random.Next(1, 3);
                 GameObject enemyGameObject = ((MonoBehaviour)__instance).gameObject;
+
+                // If we are too small we factor it once and try again.
+                if ((float)randomSize * factor <= 0.2f)
+                {
+                    randomSize *= factor;
+                }
 
                 enemyGameObject.transform.localScale = new Vector3((float)randomSize * factor, (float)randomSize * factor, (float)randomSize * factor);
             }

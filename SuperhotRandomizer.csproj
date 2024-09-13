@@ -63,9 +63,12 @@
     <Reference Include="UnityEngine.InputLegacyModule">
       <HintPath>..\..\..\SteamLibrary\steamapps\common\SUPERHOT\SH_Data\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SteamLibrary\steamapps\common\SUPERHOT\SH_Data\Managed\UnityEngine.ParticleSystemModule.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="src\AssetsUtil.cs" />
     <Compile Include="src\MainClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
