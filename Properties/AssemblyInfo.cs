@@ -1,20 +1,17 @@
-﻿using System;
-using System.Reflection;
-using System.Runtime.CompilerServices;
+﻿using System.Reflection;
 using System.Runtime.InteropServices;
-
 using MelonLoader;
-using SuperhotRandomizer; // The namespace of your mod class
+using SuperhotRandomizer;
 
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("SuperhotRandomizer")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Mod for randomizing weapons on player and enemies.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("SuperhotRandomizer")]
-[assembly: AssemblyCopyright("Copyright ©  2024")]
+[assembly: AssemblyCopyright("Copyright © 2026")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -33,10 +30,10 @@ using SuperhotRandomizer; // The namespace of your mod class
 //      Build Number
 //      Revision
 //
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: AssemblyVersion("1.1.1.0")]
+[assembly: AssemblyFileVersion("1.1.1.0")]
 
-[assembly: MelonInfo(typeof(MainClass), "Superhot Randomizer", "1.1.0", "Gasterbuzzer", "https://github.com/Gasterbuzzer/SuperhotRandomizer/releases/")]
+[assembly: MelonInfo(typeof(MainClass), "Superhot Randomizer", "1.1.1", "Gasterbuzzer", "https://github.com/Gasterbuzzer/SuperhotRandomizer/releases/")]
 [assembly: MelonGame("SUPERHOT_Team", "SUPERHOT")]
-[assembly: MelonAuthorColor(ConsoleColor.Magenta)]
+[assembly: MelonAuthorColor(255, 255, 0, 255)]
 [assembly: MelonPriority(100)]
