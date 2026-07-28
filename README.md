@@ -24,7 +24,7 @@ Player starting weapons are also randomized.
 3. Select SUPERHOT from the games list and press install.
 
 4. Move the downloaded **SuperhotRandomizer.dll**
-   (From [Downloads](https://github.com/Gasterbuzzer/SuperhotNoTime/releases))
+   (From [Downloads](https://github.com/Gasterbuzzer/SuperhotRandomizer/releases))
    to the new **Mods** folder in your SUPERHOT Directory. You can find your games Mod folder by pressing the folder icon
    MelonLoader. (Alternatively: Right mouse click the game in Steam with → Manage → Browse Local Files)
 
